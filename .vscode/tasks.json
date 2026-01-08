@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Godot C# (Debug)",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "-c", "Debug",
+                "--no-restore"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
+

@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Godot (Debug)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "Build Godot C# (Debug)",
+            "program": "c:/Program Files/Godot Engine/Godot_v4.5.1-stable_mono_win64/Godot_v4.5.1-stable_mono_win64.exe",
+            "args": [
+                "--path", "${workspaceFolder}"
+            ],
+            "cwd": "${workspaceFolder}",
+            "justMyCode": true
+        },
+        {
+            "name": "Launch Godot (Release)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "Build Godot C# (Release)",
+            "program": "c:/Program Files/Godot Engine/Godot_v4.5.1-stable_mono_win64/Godot_v4.5.1-stable_mono_win64.exe",
+            "args": [
+                "--path", "${workspaceFolder}"
+            ],
+            "cwd": "${workspaceFolder}",
+            "justMyCode": false
+        },
+        {
+            "name": "Attach to Godot",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "godotTools.editorPath.godot4": "c:\\Program Files\\Godot Engine\\Godot_v4.5.1-stable_mono_win64\\Godot_v4.5.1-stable_mono_win64.exe",
+    "FSharp.suggestGitignore": false,
+    "dotnet.server.useOmnisharp": true,
+    "dotnet.build.projectConfiguration": "Debug",
+    "dotnet.server.enableDecompilationSupport": false
+}

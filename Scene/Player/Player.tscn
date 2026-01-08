@@ -1,0 +1,97 @@
+[gd_scene load_steps=13 format=3 uid="uid://d1upqjstmb3wc"]
+
+[ext_resource type="Script" uid="uid://b27t3k34poioc" path="res://Scene/Player/Player.cs" id="1_dsw18"]
+[ext_resource type="Texture2D" uid="uid://bcla4rsrlmvek" path="res://Resources/Textures/default/default_dirt.png" id="2_wx5cg"]
+[ext_resource type="Texture2D" uid="uid://c6xuq75y423nk" path="res://Resources/Textures/default/OldGrassTop.png" id="3_25uvi"]
+[ext_resource type="Texture2D" uid="uid://clymovp0how3e" path="res://Resources/Textures/default/OldGrass.png" id="4_u008n"]
+[ext_resource type="Script" uid="uid://cxybyf7lr001i" path="res://Scripts/Block.cs" id="5_mqfxk"]
+[ext_resource type="Script" uid="uid://y7xt0nam2ajc" path="res://Scripts/WireframeCube.cs" id="7_f30au"]
+[ext_resource type="AudioStream" uid="uid://buwe4fprkoqwx" path="res://Resources/SFX/placeblock.wav" id="7_mqfxk"]
+[ext_resource type="AudioStream" uid="uid://be23t8vmeihbp" path="res://Resources/SFX/breakblock.wav" id="8_f30au"]
+
+[sub_resource type="Resource" id="Resource_f30au"]
+script = ExtResource("5_mqfxk")
+Texture = ExtResource("4_u008n")
+TopTexture = ExtResource("3_25uvi")
+BottomTexture = ExtResource("2_wx5cg")
+metadata/_custom_type_script = "uid://cxybyf7lr001i"
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_p7e0v"]
+height = 1.95
+radius = 0.45
+
+[sub_resource type="BoxMesh" id="BoxMesh_mqfxk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_25uvi"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("Head", "Camera", "RayCast", "BlockHighlight")]
+script = ExtResource("1_dsw18")
+Head = NodePath("Head")
+Camera = NodePath("Head/Camera3D")
+RayCast = NodePath("Head/Camera3D/RayCast3D")
+BlockHighlight = NodePath("BlockHighlight")
+Accel = 160.0
+JumpVelocity = 8.5
+PlaceBlock = SubResource("Resource_f30au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_p7e0v")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74570316, -0.26673225)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+current = true
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
+target_position = Vector3(0, 0, -5)
+
+[node name="BlockHighlight" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transparency = 1.0
+cast_shadow = 0
+mesh = SubResource("BoxMesh_mqfxk")
+script = ExtResource("7_f30au")
+CornerLod = 5
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+focus_mode = 2
+focus_behavior_recursive = 1
+mouse_filter = 2
+mouse_behavior_recursive = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_25uvi")
+
+[node name="PlaceSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_mqfxk")
+playback_type = 1
+
+[node name="BreakSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("8_f30au")
+playback_type = 1
