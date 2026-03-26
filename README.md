@@ -4,10 +4,7 @@ A lightweight voxel starter project made with **C# .NET 9.0** in **Godot 4.6.1 M
 
 ## Overview
 
-This project provides a clean, heavily optimized base for building voxel games in Godot.  
-It includes a configurable chunk-based world system, async chunk generation, block placement and destruction, greedy meshing, texture atlas support, **Jolt Physics** integration, and **FastNoiseLite** for voxel terrain height and depth generation.  
-The project also makes heavy use of **Godot's RenderingServer** for better performance, helping the voxel world run fast and feel smooth during gameplay.  
-It also supports high chunk render distances, with view distances of **25+ chunks** for large-scale horizon-style voxel rendering.
+This project is a heavily optimized voxel starter project for **Godot 4.6.1 Mono** with **C# .NET 9.0**. It includes a configurable **chunk system**, **async chunk loading and generation**, **greedy meshing**, **texture atlas support**, **block placement and breaking**, **Jolt Physics**, and **FastNoiseLite-based terrain generation** with adjustable height, depth, and noise scale. Built with extensive use of **Godot's RenderingServer**, it is designed for smooth performance and supports **high render distances of 25+ chunks** for large voxel worlds and far horizon views.
 
 ## Features
 
