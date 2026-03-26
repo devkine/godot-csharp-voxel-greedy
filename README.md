@@ -1,6 +1,6 @@
-# Voxel Greedy Mesher Base Project
+# Voxel Greedy Mesher Base Project - Godot C# 4.6.1
 
-A lightweight voxel starter project made with **C#** in **Godot 4.5.1 Mono**.
+A lightweight voxel starter project made with **C# .NET 9.0** in **Godot 4.6.1 Mono**.
 
 ## Overview
 
