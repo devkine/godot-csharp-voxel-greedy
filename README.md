@@ -4,8 +4,9 @@ A lightweight voxel starter project made with **C# .NET 9.0** in **Godot 4.6.1 M
 
 ## Overview
 
-This project provides a clean base for building voxel games in Godot.  
-It features a chunk-based world system with configurable chunk settings, async chunk generation, block placement and destruction, greedy meshing, and texture atlas support.
+This project provides a clean, heavily optimized base for building voxel games in Godot.  
+It includes a configurable chunk-based world system, async chunk generation, block placement and destruction, greedy meshing, and texture atlas support.  
+The project also makes heavy use of **Godot's RenderingServer** for better performance, helping the voxel world run fast and feel smooth during gameplay.
 
 ## Features
 
@@ -15,6 +16,9 @@ It features a chunk-based world system with configurable chunk settings, async c
 - **Place and break blocks**
 - **Greedy meshing**
 - **Texture atlas support**
+- **Heavy RenderingServer usage for performance**
+- **Heavily optimized voxel foundation**
+- **Smooth gameplay-focused performance**
 
 ## Preview
 
