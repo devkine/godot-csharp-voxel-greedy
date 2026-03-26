@@ -1,18 +1,23 @@
-# Voxel Greedy Mesher Base Project Godot 5.6.1 C#
+# Voxel Greedy Mesher Base Project
 
-A simple voxel base project built with **C# .NET 9.0** in **Godot 4.6.1 Mono**.
+A lightweight voxel starter project made with **C#** in **Godot 4.5.1 Mono**.
 
-This project includes the core building blocks for a voxel game prototype:
+## Overview
 
-- Chunking system
-- Place and break blocks
-- Greedy meshing
-- Texture atlas support
+This project provides a clean base for building voxel games in Godot.  
+It features a chunk-based world system with configurable chunk settings, async chunk generation, block placement and destruction, greedy meshing, and texture atlas support.
 
-## Screenshots
+## Features
 
-### World View
+- **Chunking system**
+- **Adjustable chunk settings**
+- **Async chunk generation**
+- **Place and break blocks**
+- **Greedy meshing**
+- **Texture atlas support**
+
+## Preview
+
 ![Voxel world screenshot](https://raw.githubusercontent.com/devkine/godot-csharp-voxel-greedy/main/voxel-godot02.png)
 
-### Block Editing
 ![Voxel block editing screenshot](https://raw.githubusercontent.com/devkine/godot-csharp-voxel-greedy/main/voxel-godot01.png)
