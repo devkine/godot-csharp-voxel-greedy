@@ -12,7 +12,7 @@ This project includes the core building blocks for a voxel game prototype:
 ## Screenshots
 
 ### World View
-![Voxel world screenshot](https://raw.githubusercontent.com/devkine/godot-csharp-voxel-greedy/main/voxel-godot01.png)
+![Voxel world screenshot](https://raw.githubusercontent.com/devkine/godot-csharp-voxel-greedy/main/voxel-godot02.png)
 
 ### Block Editing
-![Voxel block editing screenshot](https://raw.githubusercontent.com/devkine/godot-csharp-voxel-greedy/main/voxel-godot02.png)
+![Voxel block editing screenshot](https://raw.githubusercontent.com/devkine/godot-csharp-voxel-greedy/main/voxel-godot01.png)
